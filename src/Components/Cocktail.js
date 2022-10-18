@@ -1,11 +1,11 @@
 import "./Cocktail.css";
 
-const Cocktail = () => {
+const Cocktail = (props) => {
   const cocktailRecipe = {
-    name: "Special Drink",
-    ingredients: ["4 cl vodka", "150 ml special juice"],
-    instructions: "Shake and stir.",
-    imageUrl: "https://www.thecocktaildb.com/images/media/drink/uuytrp1474039804.jpg"
+    name: props.name,
+    ingredients: props.ingredients,
+    instructions: props.instructions,
+    imageUrl: props.imageUrl
   }
 
   let ingredientsList = cocktailRecipe.ingredients.map((ingredientItem) => <li>{ingredientItem}</li>);
