@@ -1,0 +1,13 @@
+.recipeInfo {
+    float: left;
+    margin-left: 2%;
+}
+
+.recipeImage {
+    float: right;
+}
+
+img {
+    max-width: 30%;
+    height: auto;
+}
