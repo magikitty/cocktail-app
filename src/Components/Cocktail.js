@@ -2,6 +2,7 @@ import "./Cocktail.css";
 
 const Cocktail = (props) => {
   const cocktailRecipe = {
+    id: props.id,
     name: props.name,
     ingredients: props.ingredients,
     instructions: props.instructions,
