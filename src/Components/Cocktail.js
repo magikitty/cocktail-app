@@ -12,7 +12,7 @@ const Cocktail = (props) => {
   let ingredientsList = cocktailRecipe.ingredients.map((ingredientItem) => <li>{ingredientItem}</li>);
 
   return (
-    <div>
+    <div className="cocktail">
       <div className="recipeInfo">
         <h2>{cocktailRecipe.name}</h2>
         <h3>Ingredients</h3>
@@ -22,12 +22,10 @@ const Cocktail = (props) => {
         <h3>Instructions</h3>
         <p>{cocktailRecipe.instructions}</p>
       </div>
-      <div className="recipeImage">
-        <img
-          src={cocktailRecipe.imageUrl}
-          alt="A cocktail"
-        />
-      </div>
+      <img
+        src={cocktailRecipe.imageUrl}
+        alt="A cocktail"
+      />
     </div>
   )
 };

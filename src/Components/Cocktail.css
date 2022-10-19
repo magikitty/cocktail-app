@@ -1,13 +1,23 @@
+.cocktail {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #d8a7f8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 12px;
+    text-align: left;
+    color: #f817a0;
+    display: inline-block;
+    width: 90%;
+}
+
 .recipeInfo {
     float: left;
     margin-left: 2%;
 }
 
-.recipeImage {
-    float: right;
-}
-
-img {
+.cocktail img {
     max-width: 30%;
     height: auto;
+    float: right;
+    margin-right: 1rem;
 }
