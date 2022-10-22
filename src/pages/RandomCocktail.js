@@ -23,9 +23,8 @@ const RandomCocktail = () => {
       }
 
       const transformedCocktails = data.drinks.map((cocktailData) => {
-        // Create an object to return, so we have to use {}
-        // let cocktailInfo = cocktailData[0];
-        let ingredientsArray = ["working on it..."];
+        let ingredientsArray = getIngredients(cocktailData);
+
         console.log("got id: ", cocktailData.idDrink);
         return {
           id: cocktailData.idDrink,
@@ -42,13 +41,30 @@ const RandomCocktail = () => {
     }
   };
 
+  const getIngredients = (cocktailData) => {
+    let ingredientsArray = [];
+
+    // Add ingredients to ingredients array based on key
+    Object.keys(cocktailData).forEach(
+      function (key) {
+        if (key.includes("strIngredient")) {
+          if (cocktailData[key] != null) {
+            ingredientsArray.push(cocktailData[key])
+          }
+        }
+      }
+    )
+    console.log("got ingredients:" + ingredientsArray);
+    return ingredientsArray;
+  }
+
   // Show error message or cocktail recipe
   let content;
   if (error) {
     // Only show error if there is a message (error is true)
     content = error && <p>{error}</p>;
   } else {
-    content = <CocktailList cocktails={cocktails} />;
+    content = <CocktailList cocktails={cocktails}/>;
   }
 
   return (
