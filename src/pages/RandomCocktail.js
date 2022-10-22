@@ -43,19 +43,32 @@ const RandomCocktail = () => {
 
   const getIngredients = (cocktailData) => {
     let ingredientsArray = [];
+    let ingredientNames = getArrayForKey(cocktailData, "strIngredient");
+    let ingredientAmounts = getArrayForKey(cocktailData, "strMeasure");
+
+    for (let i = 0; i < ingredientNames.length; i++) {
+      let ingredient = ingredientAmounts[i] + " " + ingredientNames[i];
+      ingredientsArray.push(ingredient);
+    }
+
+    return ingredientsArray;
+  }
+
+  // Create array of values for keys containing specified substring
+  const getArrayForKey = (cocktailData, keySubstring) => {
+    let valuesArray = [];
 
     // Add ingredients to ingredients array based on key
     Object.keys(cocktailData).forEach(
       function (key) {
-        if (key.includes("strIngredient")) {
+        if (key.includes(keySubstring)) {
           if (cocktailData[key] != null) {
-            ingredientsArray.push(cocktailData[key])
+            valuesArray.push(cocktailData[key])
           }
         }
       }
     )
-    console.log("got ingredients:" + ingredientsArray);
-    return ingredientsArray;
+    return valuesArray;
   }
 
   // Show error message or cocktail recipe
