@@ -4,6 +4,7 @@ import './App.css';
 import Home from "./pages/Home";
 import RandomCocktail from "./pages/RandomCocktail";
 import NavigationBar from "./Components/NavigationBar";
+import MyCocktails from "./pages/MyCocktails";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         </Route>
         <Route path="/random-cocktail">
           <RandomCocktail/>
+        </Route>
+        <Route path="/my-cocktails">
+          <MyCocktails/>
         </Route>
       </Switch>
     </div>
