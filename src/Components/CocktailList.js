@@ -2,7 +2,7 @@ import Cocktail from "./Cocktail";
 
 const CocktailList = (props) => {
   return (
-    <ul>
+    <ul className="cocktail-list">
       {props.cocktails.map((cocktail) => (
         <Cocktail
           key={cocktail.id}

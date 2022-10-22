@@ -13,6 +13,7 @@
 .recipeInfo {
     float: left;
     margin-left: 2%;
+    width: 55%;
 }
 
 .cocktail img {
@@ -20,4 +21,8 @@
     height: auto;
     float: right;
     margin-right: 1rem;
+}
+
+.cocktail-list {
+    list-style-type: none;
 }
