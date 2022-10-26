@@ -24,6 +24,24 @@ const MyCocktails = () => {
     console.log("POST data: " + data);
   };
 
+  const deleteCocktailHandler = async (cocktailId) => {
+    let urlDelete = "https://cocktail-app-12a4c-default-rtdb.europe-west1.firebasedatabase.app/recipes/" + cocktailId + ".json";
+    console.log(cocktailId);
+    // default method is GET, so need to specify when DELETE
+    const response = await fetch(
+      urlDelete,
+      {
+        method: "DELETE",
+        body: null,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const data = await response.json();
+    console.log("DELETE data: " + data);
+  };
+
   const fetchCocktailsDatabase = async () => {
     const response = await fetch(
       urlDatabase
@@ -58,7 +76,7 @@ const MyCocktails = () => {
     <div>
       <h1>My Cocktails</h1>
       <AddCocktail onAddCocktail={addCocktailHandler}/>
-      <CocktailList cocktails={cocktails}/>
+      <CocktailList cocktails={cocktails} deleteCocktailHandler={deleteCocktailHandler}/>
     </div>
   )
 }

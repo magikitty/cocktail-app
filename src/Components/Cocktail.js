@@ -1,7 +1,13 @@
 import "./Cocktail.css";
 
 const Cocktail = (props) => {
+
   let ingredientsList = props.ingredients.map((ingredientItem) => <li>{ingredientItem}</li>);
+
+  const deleteHandler = () => {
+    console.log("Clicked delete for " + props.id);
+    props.deleteCocktailHandler(props.id);
+  }
 
   return (
     <li key={props.id}>
@@ -19,7 +25,9 @@ const Cocktail = (props) => {
           src={props.imageUrl}
           alt="A cocktail"
         />
-        <button className={props.buttonVisibility}>DELETE</button>
+        <button onClick={deleteHandler} className={props.buttonVisibility}>
+          Delete
+        </button>
       </div>
     </li>
   )

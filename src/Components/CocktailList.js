@@ -6,11 +6,13 @@ const CocktailList = (props) => {
       {props.cocktails.map((cocktail) => (
         <Cocktail
           key={cocktail.id}
+          id={cocktail.id}
           name={cocktail.name}
           ingredients={cocktail.ingredients}
           instructions={cocktail.instructions}
           imageUrl={cocktail.imageUrl}
           buttonVisibility={props.buttonVisibility}
+          deleteCocktailHandler={props.deleteCocktailHandler}
         />
       ))}
     </ul>
