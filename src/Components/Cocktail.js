@@ -21,13 +21,10 @@ const Cocktail = (props) => {
           <h3>Instructions</h3>
           <p>{props.instructions}</p>
         </div>
-        <img
-          src={props.imageUrl}
-          alt="A cocktail"
-        />
         <button onClick={deleteHandler} className={props.buttonVisibility}>
           Delete
         </button>
+        <img src={props.imageUrl}/>
       </div>
     </li>
   )

@@ -76,7 +76,7 @@ const MyCocktails = () => {
     <div>
       <h1>My Cocktails</h1>
       <AddCocktail onAddCocktail={addCocktailHandler}/>
-      <CocktailList cocktails={cocktails} deleteCocktailHandler={deleteCocktailHandler}/>
+      <CocktailList cocktails={cocktails} deleteCocktailHandler={deleteCocktailHandler} buttonVisibility="isVisible"/>
     </div>
   )
 }
