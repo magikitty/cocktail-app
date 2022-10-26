@@ -1,27 +1,64 @@
+import {useEffect, useState} from "react";
+
 import CocktailList from "../Components/CocktailList";
+import AddCocktail from "../Components/AddCocktail";
 
 const MyCocktails = () => {
-  const listCocktails = [
-    {
-      id: "1",
-      name: "Special Drink",
-      instructions: "Mix it.",
-      ingredients: ["4 cl vodka", "150 ml special juice"],
-      imageUrl: "https://www.thecocktaildb.com/images/media/drink/uuytrp1474039804.jpg",
-    },
-    {
-      id: "2",
-      name: "Fun Drink",
-      instructions: "Shake it.",
-      ingredients: ["4 cl vodka", "150 ml fun juice"],
-      imageUrl: "https://www.thecocktaildb.com/images/media/drink/g12lj41493069391.jpg",
-    },
-  ];
+  const [cocktails, setCocktails] = useState([]);
+  const urlDatabase = "https://cocktail-app-12a4c-default-rtdb.europe-west1.firebasedatabase.app/recipes.json";
+
+  const addCocktailHandler = async (cocktail) => {
+    console.log(cocktail);
+    // default method is GET, so need to specify when POST
+    const response = await fetch(
+      urlDatabase,
+      {
+        method: "POST",
+        body: JSON.stringify(cocktail),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const data = await response.json();
+    console.log("POST data: " + data);
+  };
+
+  const fetchCocktailsDatabase = async () => {
+    const response = await fetch(
+      urlDatabase
+    );
+    const data = await response.json();
+
+    const fetchedCocktails = [];
+
+    for (const key in data) {
+      fetchedCocktails.push({
+        id: key,
+        name: data[key].name,
+        ingredients: getIngredientsArray(data[key].ingredients),
+        instructions: data[key].instructions,
+      });
+    }
+
+    setCocktails(fetchedCocktails);
+  };
+
+  // Split string at "," and add create array
+  const getIngredientsArray = (ingredientsString) => {
+    return ingredientsString.split(",");
+  }
+
+  // Called when component is evaluated, no need for separate fetching button
+  useEffect(() => {
+    fetchCocktailsDatabase();
+  }, [fetchCocktailsDatabase]);
 
   return (
     <div>
       <h1>My Cocktails</h1>
-      <CocktailList cocktails={listCocktails}/>
+      <AddCocktail onAddCocktail={addCocktailHandler}/>
+      <CocktailList cocktails={cocktails}/>
     </div>
   )
 }
