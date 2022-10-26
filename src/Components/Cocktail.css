@@ -26,3 +26,11 @@
 .cocktail-list {
     list-style-type: none;
 }
+
+.isVisible {
+    visibility: visible;
+}
+
+.isHidden {
+    visibility: hidden;
+}

@@ -10,6 +10,7 @@ const CocktailList = (props) => {
           ingredients={cocktail.ingredients}
           instructions={cocktail.instructions}
           imageUrl={cocktail.imageUrl}
+          buttonVisibility={props.buttonVisibility}
         />
       ))}
     </ul>

@@ -87,7 +87,7 @@ const FetchCocktailsWithForm = (props) => {
     // Only show error if there is a message (error is true)
     content = error && <p>{error}</p>;
   } else {
-    content = <CocktailList cocktails={cocktails}/>;
+    content = <CocktailList cocktails={cocktails} buttonVisibility="isHidden"/>;
   }
 
   return (

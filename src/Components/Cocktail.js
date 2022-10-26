@@ -19,6 +19,7 @@ const Cocktail = (props) => {
           src={props.imageUrl}
           alt="A cocktail"
         />
+        <button className={props.buttonVisibility}>DELETE</button>
       </div>
     </li>
   )
