@@ -1,4 +1,5 @@
 import FetchCocktailsWithForm from "../Components/FetchCocktailsWithForm";
+import "../Components/Form.css";
 
 const Home = () => {
   const apiUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
@@ -6,7 +7,7 @@ const Home = () => {
   return (
     <div>
       <h1>Home</h1>
-      <p>Search for a cocktail by name</p>
+      <h3>Search for cocktail recipes by name</h3>
       <FetchCocktailsWithForm urlApi={apiUrl}/>
     </div>
   )

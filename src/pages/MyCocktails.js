@@ -75,6 +75,7 @@ const MyCocktails = () => {
   return (
     <div>
       <h1>My Cocktails</h1>
+      <h3>Add your own cocktail recipes and view your saved cocktails</h3>
       <AddCocktail onAddCocktail={addCocktailHandler}/>
       <CocktailList cocktails={cocktails} deleteCocktailHandler={deleteCocktailHandler} buttonVisibility="isVisible"/>
     </div>
