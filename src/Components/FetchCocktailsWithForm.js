@@ -6,22 +6,19 @@ const FetchCocktailsWithForm = (props) => {
   const [cocktails, setCocktails] = useState([]);
   const [error, setError] = useState(null);
   const refName = useRef(null);
-  const [nameSearched, setNameSearched] = useState();
 
   const fetchCocktail = async (event) => {
     console.log("pressed submit");
     // Prevent default submit behaviour to use custom behaviour
     event.preventDefault();
-    setNameSearched(refName.current.value);
     console.log("refName: " + refName.current.value);
-    console.log("name searched: " + nameSearched);
 
     setError(null);
 
     try {
       // Wait for fetch to be resolved
-      const response = await fetch(props.urlApi + nameSearched);
-      console.log("url: " + props.urlApi + nameSearched);
+      const response = await fetch(props.urlApi + refName.current.value);
+      console.log("url: " + props.urlApi + refName.current.value);
       console.log("response: " + response);
       const data = await response.json();
       console.log("data : " + data);
