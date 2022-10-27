@@ -5,7 +5,7 @@ import CocktailList from "../Components/CocktailList";
 const FetchCocktailsWithForm = (props) => {
   const [cocktails, setCocktails] = useState([]);
   const [error, setError] = useState(null);
-  const refName = useRef("");
+  const refName = useRef(null);
   const [nameSearched, setNameSearched] = useState();
 
   const fetchCocktail = async (event) => {
@@ -48,7 +48,7 @@ const FetchCocktailsWithForm = (props) => {
     } catch (err) {
       setError(err.message);
     }
-    refName.current.value = "";
+    refName.current.value = null;
   };
 
   const getIngredients = (cocktailData) => {
@@ -95,7 +95,7 @@ const FetchCocktailsWithForm = (props) => {
       <form>
         <div>
           <label htmlFor="name">Cocktail name: </label>
-          <textarea id="name" ref={refName}></textarea>
+          <input type="text" id="name" ref={refName}/>
         </div>
         <button onClick={fetchCocktail} type="submit" id="search-btn">search</button>
       </form>
