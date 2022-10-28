@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import CocktailList from "../Components/CocktailList";
 import AddCocktail from "../Components/AddCocktail";
 
-const MyCocktails = () => {
+const MyCocktails = (props) => {
   const [cocktails, setCocktails] = useState([]);
   const urlDatabase = "https://cocktail-app-12a4c-default-rtdb.europe-west1.firebasedatabase.app/recipes.json";
 
@@ -77,7 +77,12 @@ const MyCocktails = () => {
       <h1>My Cocktails</h1>
       <h3>Add your own cocktail recipes and view your saved cocktails</h3>
       <AddCocktail onAddCocktail={addCocktailHandler}/>
-      <CocktailList cocktails={cocktails} deleteCocktailHandler={deleteCocktailHandler} buttonVisibility="isVisible"/>
+      <CocktailList
+        cocktails={cocktails}
+        deleteCocktailHandler={deleteCocktailHandler}
+        buttonVisibility="isVisible"
+        addFavouriteHandler={props.addFavouriteHandler}
+      />
     </div>
   )
 }

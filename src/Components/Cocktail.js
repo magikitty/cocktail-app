@@ -17,7 +17,6 @@ const Cocktail = (props) => {
       instructions: props.instructions,
       imageUrl: props.imageUrl,
     };
-    console.log("passing function: " + props.addFavouriteHandler);
     props.addFavouriteHandler(cocktail);
   }
 

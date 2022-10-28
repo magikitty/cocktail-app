@@ -5,23 +5,6 @@ const Favourites = () => {
   const [cocktails, setCocktails] = useState([]);
   const urlDatabase = "https://cocktail-app-12a4c-default-rtdb.europe-west1.firebasedatabase.app/favourites.json";
 
-  const addFavouriteHandler = async (cocktail) => {
-    console.log("adding to favourites: " + cocktail);
-    // default method is GET, so need to specify when POST
-    const response = await fetch(
-      urlDatabase,
-      {
-        method: "POST",
-        body: JSON.stringify(cocktail),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    const data = await response.json();
-    console.log("POST data: " + data);
-  };
-
   const deleteFavouriteHandler = async (cocktailId) => {
     let urlDelete = "https://cocktail-app-12a4c-default-rtdb.europe-west1.firebasedatabase.app/favourites/" + cocktailId + ".json";
     console.log(cocktailId);

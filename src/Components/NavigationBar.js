@@ -16,6 +16,9 @@ const NavigationBar = () => {
           <li>
             <Link to="/random-cocktail">Random Cocktail</Link>
           </li>
+          <li>
+            <Link to="/favourites">Favourites</Link>
+          </li>
         </ul>
       </nav>
     </header>
