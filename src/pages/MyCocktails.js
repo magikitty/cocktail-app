@@ -81,6 +81,7 @@ const MyCocktails = (props) => {
         cocktails={cocktails}
         deleteCocktailHandler={deleteCocktailHandler}
         buttonVisibility="isVisible"
+        buttonVisibilityFavourite="isVisible"
         addFavouriteHandler={props.addFavouriteHandler}
       />
     </div>

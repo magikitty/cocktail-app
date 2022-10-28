@@ -85,7 +85,12 @@ const FetchCocktailsWithForm = (props) => {
     content = error && <p>{error}</p>;
   } else {
     content =
-      <CocktailList cocktails={cocktails} buttonVisibility="isHidden" addFavouriteHandler={props.addFavouriteHandler}/>;
+      <CocktailList
+        cocktails={cocktails}
+        buttonVisibility="isHidden"
+        addFavouriteHandler={props.addFavouriteHandler}
+        buttonVisibilityFavourite="isVisible"
+      />;
   }
 
   return (

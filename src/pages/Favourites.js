@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import CocktailList from "../Components/CocktailList";
+import "../Components/Cocktail.css";
 
 const Favourites = () => {
   const [cocktails, setCocktails] = useState([]);
@@ -55,7 +56,9 @@ const Favourites = () => {
       <CocktailList
         cocktails={cocktails}
         deleteCocktailHandler={deleteFavouriteHandler}
-        buttonVisibility="isVisible"/>
+        buttonVisibility="isVisible"
+        buttonVisibilityFavourite="isHidden"
+      />
     </div>
   )
 }

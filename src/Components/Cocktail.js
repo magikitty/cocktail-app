@@ -35,7 +35,7 @@ const Cocktail = (props) => {
         <button onClick={deleteHandler} className={props.buttonVisibility}>
           Delete
         </button>
-        <button onClick={favouriteHandler}>
+        <button onClick={favouriteHandler} className={props.buttonVisibilityFavourite}>
           Favourite
         </button>
         <img src={props.imageUrl} alt=""/>

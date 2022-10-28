@@ -76,7 +76,13 @@ const FetchCocktailApi = (props) => {
     // Only show error if there is a message (error is true)
     content = error && <p>{error}</p>;
   } else {
-    content = <CocktailList cocktails={cocktails} buttonVisibility="isHidden" addFavouriteHandler={props.addFavouriteHandler}/>;
+    content =
+      <CocktailList
+        cocktails={cocktails}
+        buttonVisibility="isHidden"
+        addFavouriteHandler={props.addFavouriteHandler}
+        buttonVisibilityFavourite="isVisible"
+      />;
   }
 
   return (
