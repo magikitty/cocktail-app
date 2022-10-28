@@ -9,6 +9,18 @@ const Cocktail = (props) => {
     props.deleteCocktailHandler(props.id);
   }
 
+  const favouriteHandler = () => {
+    console.log("Clicked favourite for " + props.id);
+    let cocktail = {
+      name: props.name,
+      ingredients: props.ingredients,
+      instructions: props.instructions,
+      imageUrl: props.imageUrl,
+    };
+    console.log("passing function: " + props.addFavouriteHandler);
+    props.addFavouriteHandler(cocktail);
+  }
+
   return (
     <li key={props.id}>
       <div className="cocktail">
@@ -24,7 +36,10 @@ const Cocktail = (props) => {
         <button onClick={deleteHandler} className={props.buttonVisibility}>
           Delete
         </button>
-        <img src={props.imageUrl}/>
+        <button onClick={favouriteHandler}>
+          Favourite
+        </button>
+        <img src={props.imageUrl} alt=""/>
       </div>
     </li>
   )

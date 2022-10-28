@@ -13,6 +13,7 @@ const CocktailList = (props) => {
           imageUrl={cocktail.imageUrl}
           buttonVisibility={props.buttonVisibility}
           deleteCocktailHandler={props.deleteCocktailHandler}
+          addFavouriteHandler={props.addFavouriteHandler}
         />
       ))}
     </ul>
