@@ -11,10 +11,10 @@ const NavigationBar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/my-cocktails">My Cocktails</Link>
+            <Link to="/random-cocktail">Random Cocktail</Link>
           </li>
           <li>
-            <Link to="/random-cocktail">Random Cocktail</Link>
+            <Link to="/my-cocktails">My Cocktails</Link>
           </li>
           <li>
             <Link to="/favourites">Favourites</Link>

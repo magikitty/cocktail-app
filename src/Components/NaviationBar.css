@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #3d087c;
+    background-color: #a3c4f3;
 }
 
 .header li {
@@ -14,11 +14,11 @@
 .header li a {
     display: block;
     padding: 1rem 2rem;
-    color: #ce328d;
+    color: #a9096f;
     text-align: center;
     text-decoration: none;
 }
 
 .header li a:hover {
-    background-color: #160233;
+    background-color: #8ab1e5;
 }
