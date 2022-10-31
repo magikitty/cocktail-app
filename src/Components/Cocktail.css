@@ -30,9 +30,10 @@
     visibility: hidden;
 }
 
-.my-cocktail-img {
+.page-cocktail-img {
     max-width: 25%;
     height: auto;
+    margin: 1rem;
 }
 
 .recipeInfo {

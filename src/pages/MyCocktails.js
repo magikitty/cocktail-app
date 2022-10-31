@@ -78,9 +78,9 @@ const MyCocktails = (props) => {
       <h1>My Cocktails</h1>
       <h3>Add your own cocktail recipes and view your saved cocktails</h3>
       <img
-        className="my-cocktail-img"
+        className="page-cocktail-img"
         src="https://www.thecocktaildb.com/images/media/drink/hyztmx1598719265.jpg"
-        alt=""/>
+        alt="A cocktail"/>
       <AddCocktail onAddCocktail={addCocktailHandler}/>
       <CocktailList
         cocktails={cocktails}
