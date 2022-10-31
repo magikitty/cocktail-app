@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 
 import CocktailList from "../Components/CocktailList";
 import AddCocktail from "../Components/AddCocktail";
+import Footer from "../layout/Footer";
 
 const MyCocktails = (props) => {
   const [cocktails, setCocktails] = useState([]);
@@ -88,7 +89,7 @@ const MyCocktails = (props) => {
         buttonVisibilityFavourite="isVisible"
         addFavouriteHandler={props.addFavouriteHandler}
       />
-      <p>Cocktail Corner</p>
+      <Footer/>
     </div>
   )
 };

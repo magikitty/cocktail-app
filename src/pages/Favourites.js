@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import CocktailList from "../Components/CocktailList";
 import "../Components/Cocktail.css";
+import Footer from "../layout/Footer";
 
 const Favourites = () => {
   const [cocktails, setCocktails] = useState([]);
@@ -59,6 +60,7 @@ const Favourites = () => {
         buttonVisibility="isVisible"
         buttonVisibilityFavourite="isHidden"
       />
+      <Footer/>
     </div>
   )
 }
