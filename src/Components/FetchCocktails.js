@@ -12,9 +12,7 @@ const FetchCocktailApi = (props) => {
     try {
       // Wait for fetch to be resolved
       const response = await fetch(props.urlApi);
-      console.log(response);
       const data = await response.json();
-      console.log(data);
 
       // Check for error and throw error message
       if (!response.ok) {

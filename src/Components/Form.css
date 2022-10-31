@@ -1,4 +1,12 @@
 form {
     margin: 3rem;
-    text-align: left;
+    text-align: center;
+}
+
+form button {
+    margin: 1rem;
+}
+
+.label-text {
+    margin: 1rem;
 }

@@ -26,17 +26,17 @@ const AddCocktail = (props) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <div>
+      <div className="label-text">
         <label htmlFor="name">Cocktail name: </label><br/>
-        <textarea rows="1" cols="50" id="name" ref={refName}></textarea>
+        <textarea rows="1" cols="80" id="name" ref={refName}></textarea>
       </div>
-      <div>
+      <div className="label-text">
         <label htmlFor="ingredients">Ingredients (write ingredients separated by commas): </label><br/>
-        <textarea rows="5" cols="50" id="ingredients" ref={refIngredients}></textarea>
+        <textarea rows="5" cols="80" id="ingredients" ref={refIngredients}></textarea>
       </div>
-      <div>
+      <div className="label-text">
         <label htmlFor="instructions">Instructions: </label><br/>
-        <textarea rows="5" cols="50" id="instructions" ref={refInstructions}></textarea>
+        <textarea rows="5" cols="80" id="instructions" ref={refInstructions}></textarea>
       </div>
       <button>Add Cocktail</button>
     </form>
