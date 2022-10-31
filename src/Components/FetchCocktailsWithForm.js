@@ -8,20 +8,17 @@ const FetchCocktailsWithForm = (props) => {
   const refName = useRef(null);
 
   const fetchCocktail = async (event) => {
-    console.log("pressed submit");
     // Prevent default submit behaviour to use custom behaviour
     event.preventDefault();
-    console.log("refName: " + refName.current.value);
-
     setError(null);
 
     try {
+      // Replace spaces with + for URL search parameters
+      let nameSearched = refName.current.value.replaceAll(" ", "+");
       // Wait for fetch to be resolved
-      const response = await fetch(props.urlApi + refName.current.value);
-      console.log("url: " + props.urlApi + refName.current.value);
-      console.log("response: " + response);
+      const response = await fetch(props.urlApi + nameSearched);
+      console.log("url SEARCHED: " + props.urlApi + nameSearched);
       const data = await response.json();
-      console.log("data : " + data);
 
       // Check for error and throw error message
       if (!response.ok) {
@@ -100,7 +97,7 @@ const FetchCocktailsWithForm = (props) => {
           <label htmlFor="name">Cocktail name: </label>
           <input type="text" id="name" ref={refName}/>
         </div>
-        <button onClick={fetchCocktail} type="submit" id="search-btn">search</button>
+        <button onClick={fetchCocktail} type="submit" id="search-btn">Search</button>
       </form>
       <section>
         {content}
