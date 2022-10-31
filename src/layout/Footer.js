@@ -1,4 +1,4 @@
-import "../Components/NaviationBar.css";
+import "./layout.css";
 
 const Footer = () => {
   return (

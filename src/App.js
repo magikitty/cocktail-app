@@ -3,7 +3,7 @@ import {Route, Switch} from "react-router-dom";
 import './App.css';
 import Home from "./pages/Home";
 import RandomCocktail from "./pages/RandomCocktail";
-import NavigationBar from "./Components/NavigationBar";
+import NavigationBar from "./layout/NavigationBar";
 import MyCocktails from "./pages/MyCocktails";
 import Favourites from "./pages/Favourites";
 
