@@ -76,6 +76,10 @@ const MyCocktails = (props) => {
     <div>
       <h1>My Cocktails</h1>
       <h3>Add your own cocktail recipes and view your saved cocktails</h3>
+      <img
+        className="my-cocktail-img"
+        src="https://www.thecocktaildb.com/images/media/drink/hyztmx1598719265.jpg"
+        alt=""/>
       <AddCocktail onAddCocktail={addCocktailHandler}/>
       <CocktailList
         cocktails={cocktails}
@@ -84,8 +88,9 @@ const MyCocktails = (props) => {
         buttonVisibilityFavourite="isVisible"
         addFavouriteHandler={props.addFavouriteHandler}
       />
+      <p>Cocktail Corner</p>
     </div>
   )
-}
+};
 
 export default MyCocktails;
