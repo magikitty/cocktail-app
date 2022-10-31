@@ -19,6 +19,7 @@ const NavigationBar = () => {
           <li>
             <Link to="/favourites">Favourites</Link>
           </li>
+          <p className="title">&#127864; Cocktail Corner &#127864;</p>
         </ul>
       </nav>
     </header>

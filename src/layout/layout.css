@@ -13,10 +13,11 @@
 
 .header li a {
     display: block;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     color: #a9096f;
     text-align: center;
     text-decoration: none;
+    font-size: large;
 }
 
 .header li a:hover {
@@ -29,9 +30,21 @@
     bottom: 0;
     width: 100%;
     height: 2.5rem;
-    /*background-color: #a3c4f3;*/
+    background-color: #a3c4f3;
 }
 
 .footer-text {
     text-align: center;
+    font-size: large;
+    color: #400d52;
+    font-weight: bold;
+}
+
+.title {
+    float: right;
+    margin-right: 2.5rem;
+    font-weight: bold;
+    color: #761b98;
+    font-size: x-large;
+    padding: 0;
 }
