@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import CocktailList from "../Components/CocktailList";
-import "../Components/Cocktail.css";
+import "../styling/Cocktail.css";
 import Footer from "../layout/Footer";
 
 const Favourites = () => {
@@ -54,6 +54,7 @@ const Favourites = () => {
   return (
     <div>
       <h1>Favourites</h1>
+      <h2>View your favourite cocktails</h2>
       <CocktailList
         cocktails={cocktails}
         deleteCocktailHandler={deleteFavouriteHandler}

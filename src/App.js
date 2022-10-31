@@ -1,6 +1,6 @@
 import {Route, Switch} from "react-router-dom";
 
-import './App.css';
+import './styling/App.css';
 import Home from "./pages/Home";
 import RandomCocktail from "./pages/RandomCocktail";
 import NavigationBar from "./layout/NavigationBar";

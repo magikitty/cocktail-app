@@ -1,5 +1,5 @@
 import FetchCocktailsWithForm from "../Components/FetchCocktailsWithForm";
-import "../Components/Form.css";
+import "../styling/Form.css";
 import Footer from "../layout/Footer";
 
 const Home = (props) => {

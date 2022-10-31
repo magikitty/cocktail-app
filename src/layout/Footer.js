@@ -1,4 +1,4 @@
-import "./layout.css";
+import "../styling/NavAndFooter.css";
 
 const Footer = () => {
   return (

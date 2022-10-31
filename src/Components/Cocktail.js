@@ -1,4 +1,4 @@
-import "./Cocktail.css";
+import "../styling/Cocktail.css";
 
 const Cocktail = (props) => {
 
