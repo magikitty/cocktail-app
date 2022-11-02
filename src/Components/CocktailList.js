@@ -6,12 +6,14 @@ import React, {
 
 import useIntersectionObserver from "./useIntersectionObserver";
 
+// Load component dynamically to allow for lazy loading
 const Cocktail = lazy(() => import("./Cocktail"));
 
 const CocktailList = (props) => {
   const cocktailLazy = useRef(null);
   const isCocktailVisible = useIntersectionObserver(cocktailLazy);
 
+  // Show section containing list only if isCocktailVisible is true -> i.e. component is in viewport
   return (
     <section ref={cocktailLazy}>
       {isCocktailVisible && (
